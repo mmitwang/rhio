@@ -1,0 +1,7 @@
+zeromq-4.0.5.tar.gz
+build
+**.swp
+ZeroMQ
+cppzmq
+.vscode
+
