@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 2.8)
 project(RhIO)
 
 #Option for compiling Tests
-option(BUILD_RHIO_TESTS "Build RhIO Tests" OFF)
+option(BUILD_RHIO_TESTS "Build RhIO Tests" ON)  
 
 #Include sources directory
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Server)
@@ -56,9 +56,9 @@ if (BUILD_RHIO_TESTS)
     target_link_libraries(testTree RhIO)
     add_executable(testValue Tests/testValue.cpp)
     target_link_libraries(testValue RhIO)
-    add_executable(testServer Tests/testServer.cpp)
-    target_link_libraries(testServer RhIO)
-    add_executable(testClient Tests/testClient.cpp)
-    target_link_libraries(testClient RhIOClient)
+    add_executable(testServerRep Tests/testServerRep.cpp)
+    target_link_libraries(testServerRep RhIO)
+    add_executable(testClientReq Tests/testClientReq.cpp)
+    target_link_libraries(testClientReq RhIOClient)
 endif (BUILD_RHIO_TESTS)
 
